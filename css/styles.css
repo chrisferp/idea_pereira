@@ -99,23 +99,7 @@ footer{
 	transform: skew(10deg);
 	padding: 15px;
 	
-	/*animacion*/
-
-	animation-name: cambiaColor;
-	animation-duration: 3s;
-	animation-iteration-count: infinite;
-
-}
-
-@keyframes cambiaColor{
-
-	from{
-		color: crimson;
-	}
-	to{
-		color: teal;
-	}
-
+	
 }
 /*Contenido  lateral*/
 .contenido--lateral{
