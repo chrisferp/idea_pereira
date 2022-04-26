@@ -1,0 +1,303 @@
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+  }
+  
+  
+  body{
+  	width: 100%;
+  	min-height: 100vh;
+  	background-image: linear-gradient(to left,red,yellow);
+  	font-family: Cascadia Mono SemiBold;
+  	position: relative;
+  	display: grid;
+  	grid-template-columns: repeat(3, 1fr);
+  	grid-template-rows: 150px ;
+  	grid-template-areas: "header  header  header"
+  						 "aside  main  main"
+  						 "aside  main  main"
+  						 "aside  main  main"
+  						 "footer  footer  footer"
+  						 "footer  footer  footer";
+
+  }
+  aside	{
+  	grid-area: aside;
+  	width: 400px;
+  	transform: translate(10px,  25px);
+  }
+  main{
+  	grid-area: main;
+  }
+
+/*header*/
+
+header{
+	grid-area: header;
+	position: relative;
+	overflow: hidden;
+}
+footer{
+	 background-color: black;
+	 color: white;
+	 overflow: hidden;
+     grid-area: footer;
+
+}
+
+
+/*top*/
+.header__top{
+	background-color: black;
+	color: white;
+	text-align: center;
+
+}
+.header__top ul li{
+	display: inline;
+	margin: 30px;
+
+}
+
+/*logo_menu*/
+
+.mainmenu{
+	background-color: white;
+	width: 100%;
+	position: absolute;
+	display: flex;
+}
+/*logo*/
+.mainmenu .logo{
+	position: absolute;
+	top: 13px;
+	
+	
+
+}
+
+
+/*menu*/
+.mainmenu{
+	height: 90%;
+}
+.mainmenu .menuContent{
+	position: absolute;
+	top: 50px;
+	left: 25%;
+	
+}
+.mainmenu ul li{
+	
+	display: inline;
+	font-family: Cascadia Mono SemiBold;
+	font-size: 20px;
+	border: solid;
+	transform: skew(10deg);
+	padding: 15px;
+	
+	/*animacion*/
+
+	animation-name: cambiaColor;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+
+}
+
+@keyframes cambiaColor{
+
+	from{
+		color: crimson;
+	}
+	to{
+		color: teal;
+	}
+
+}
+/*Contenido  lateral*/
+.contenido--lateral{
+	background-color: none;
+}
+/*Contenido principal*/
+
+.mainmenu li{
+	margin: 25px;
+	font-size: 25px;
+}
+/*contenido--principal*/
+.contenido--principal{
+	width: 100%;
+	display: flex;
+	position: relative;
+	display: flex;
+	flex-flow: wrap;
+	align-content: flex-start;
+
+
+
+}
+
+.contenido--principal div{
+	
+	border-style: solid;
+	border-color: black;
+	padding: 15px;
+	margin: 15px;
+	background-color: white;
+	text-transform: uppercase;
+
+}
+.contenido--principal div img{
+	max-height: 300px;
+	max-width: 500;
+}
+
+
+
+/*pie_de_pagina*/
+
+
+
+@media screen and (max-width: 468px){
+	
+	body{
+		display: grid;
+		grid-template-columns: 1fr;
+		grid grid-template-rows: 150px 1fr 150px;
+		grid-template-areas: "header"
+							 "main"
+							 "footer";	
+
+	}
+	header{
+		overflow: visible;
+	}
+
+	aside{
+		display: none;
+	}
+
+	/*logo*/
+	.mainmenu .logo{
+		position: absolute;
+		left:2px ;
+		top: 5px;
+	}
+	.mainmenu .menuContent{
+		
+		position: absolute;
+		
+		left: 20px;
+		right: 20px;
+		top: 25px;
+		display: flex;
+		flex-wrap: wrap;
+		padding-left: 7%;
+		
+	}
+	.mainmenu ul li{
+
+		border: 30px;
+		display: block;
+		margin: 5px;
+		padding: 0px;
+		font-size: 12px;
+	}
+	.contenido--principal{
+	margin-top: 8%;
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-around;
+
+}
+	.header_menu_container{
+		display: flex;
+		
+
+	}
+
+	}
+	.mainmenu{
+		position: relative;
+		
+		height: 100%;
+	}
+	.logo{
+		display: block;
+	}
+	.header_menu_container ul{
+		position: relative;
+		bottom: 0px;
+	}
+}
+}
+
+@media screen and (max-width: 468px){
+	
+	body{
+		display: grid;
+		grid-template-columns: 1fr;
+		grid grid-template-rows: 150px 1fr 150px;
+		grid-template-areas: "header"
+							 "main"
+							 "footer";	
+
+	}
+	header{
+		overflow: visible;
+	}
+
+	aside{
+		display: none;
+	}
+
+	/*logo*/
+	.logo{
+		position: absolute;
+		margin-left:30px ;
+	}
+	.mainmenu .menuContent{
+		
+		position: absolute;
+		top: 5px;
+		display: flex;
+		flex-wrap: wrap;
+		padding-left: 7%;
+		
+	}
+	.mainmenu ul li{
+		border: 30px;
+		display: block;
+		margin: 5px;
+		padding: 10px;
+	}
+	.contenido--principal{
+	margin-top: 8%;
+	display: flex;
+	flex-flow: wrap;
+	justify-content: space-around;
+
+}
+	.header_menu_container{
+		display: flex;
+		
+
+	}
+
+	}
+	.mainmenu{
+		position: relative;
+		
+		height: 100%;
+	}
+	.logo{
+		display: block;
+	}
+	.header_menu_container ul{
+		position: relative;
+		bottom: 0px;
+	}
+}
